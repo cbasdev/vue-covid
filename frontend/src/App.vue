@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <h1>Casos de Covid en Colombia</h1>
+      <router-link to="/">Agrupar por Género</router-link> |
+      <router-link to="/filter-age">Agrupar por Edad</router-link> |
+      <router-link to="/filter-city">Agrupar por Ciudades</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
