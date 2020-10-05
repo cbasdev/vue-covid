@@ -141,6 +141,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/_variables.scss';
+
 .filter-age {
   padding: 0 5% 0 5%;
   .pagination {
