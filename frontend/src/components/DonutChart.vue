@@ -1,38 +1,29 @@
 <template>
   <div>
-    {{ lengthMale }}
-    {{ lengthFemale }}
-    <chartjs-doughnut
-      v-bind:labels="labels"
-      v-bind:datasets="datasets"
-      v-bind:option="option"
-    >
-    </chartjs-doughnut>
+    <apexchart
+      width="380"
+      type="donut"
+      :options="options"
+      :series="series"
+    ></apexchart>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'DonutChart',
   props: ['lengthMale', 'lengthFemale'],
-
-  data() {
+  data: function() {
     return {
-      labels: ['Mujeres Contagiadas', 'Hombres Contagiados'],
-      datasets: [
-        {
-          data: [parseInt(this.lengthMale), parseInt(this.lengthFemale)],
-          backgroundColor: ['#aa78a6ff', '#b2ffd6ff'],
-          borderWidth: 3,
-        },
-      ],
-      option: {
-        title: {
-          display: true,
-          position: 'bottom',
-          text: 'Comparación de contactos',
-        },
+      options: {
+        labels: ['Casos Masculinos', 'Casos Femeninos'],
       },
+      series: [this.lengthMale, this.lengthFemale],
     }
+  },
+  mounted() {
+    console.log('Male', this.lengthMale)
+    console.log('Felame', this.lengthFemale)
   },
 }
 </script>
