@@ -1,29 +1,27 @@
 <template>
-  <div>
-    <apexchart
-      width="380"
-      type="donut"
-      :options="options"
-      :series="series"
-    ></apexchart>
-  </div>
+  <apexchart type="donut" :options="options" :series="series"></apexchart>
 </template>
 
 <script>
 export default {
   name: 'DonutChart',
-  props: ['lengthMale', 'lengthFemale'],
+  props: ['seriesSelected', 'labelsSelected', 'colorsSelected'],
   data: function() {
     return {
       options: {
-        labels: ['Casos Masculinos', 'Casos Femeninos'],
+        plotOptions: {
+          pie: {
+            donut: {
+              size: '53%',
+              marginTop: 200,
+            },
+          },
+        },
+        labels: this.labelsSelected,
+        colors: this.colorsSelected,
       },
-      series: [this.lengthMale, this.lengthFemale],
+      series: this.seriesSelected,
     }
-  },
-  mounted() {
-    console.log('Male', this.lengthMale)
-    console.log('Felame', this.lengthFemale)
   },
 }
 </script>
