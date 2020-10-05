@@ -8,7 +8,7 @@
           v-on:click="
             () => {
               selectCases = mapCases(filter_0_to_19)
-              selectGender = 'Femeninos'
+              selectGender = 'de 0 a 19 años'
             }
           "
           variant="outline-primary"
@@ -19,7 +19,7 @@
           v-on:click="
             () => {
               selectCases = mapCases(filter_20_to_39)
-              selectGender = 'Masculinos'
+              selectGender = 'de 20 a 39 años'
             }
           "
           variant="outline-primary"
@@ -30,7 +30,7 @@
           v-on:click="
             () => {
               selectCases = mapCases(filter_40_to_59)
-              selectGender = 'Masculinos'
+              selectGender = 'de 40 a 59 años'
             }
           "
           variant="outline-primary"
@@ -41,7 +41,7 @@
           v-on:click="
             () => {
               selectCases = mapCases(filter_60_to_more)
-              selectGender = 'Masculinos'
+              selectGender = 'de 60 años o mas'
             }
           "
           variant="outline-primary"
@@ -97,7 +97,7 @@ export default {
       lengthMale: 0,
       loading: false,
       selectCases: [],
-      selectGender: 'Femeninos',
+      selectGender: 'de 0 a 19 años',
     }
   },
 
