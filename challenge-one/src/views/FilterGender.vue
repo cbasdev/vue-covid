@@ -37,6 +37,8 @@
         :colorsSelected="['#41c7c7', '#f649a8']"
       />
     </div>
+    <hr />
+    <TestTitle />
   </div>
 </template>
 
@@ -44,6 +46,7 @@
 import axios from 'axios'
 import DonutChart from '../components/DonutChart'
 import PaginationCard from '../components/PaginationCard'
+import TestTitle from '../components/LearnJest/TestTitle'
 
 export default {
   name: 'FilterGender',
@@ -51,6 +54,7 @@ export default {
   components: {
     DonutChart,
     PaginationCard,
+    TestTitle,
   },
   data() {
     return {
