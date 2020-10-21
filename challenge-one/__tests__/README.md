@@ -34,7 +34,7 @@ saving time and money.
 
 # Concepts of Jest in Vue
 
-<img src="../src/assets/test-4.png" alt="imagen-test-4" />
+<img width="700" src="../src/assets/test-4.png" alt="imagen-test-4" />
 
 ## Comprobar si renderiza el componente
 
